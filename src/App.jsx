@@ -21,9 +21,9 @@ const Input = ({
   error,
 }) => {
   const base =
-    "mt-1 w-full rounded-2xl border bg-white/70 px-4 py-3 shadow-sm outline-none focus:ring-4";
-  const ok = "border-slate-200 focus:border-indigo-400 focus:ring-indigo-100";
-  const bad = "border-rose-500 focus:border-rose-500 focus:ring-rose-100";
+    "mt-1 w-full rounded-2xl border bg-white/70 px-4 py-3 shadow-sm outline-none ";
+  const ok = "border-slate-200 focus:border-[#104c6b] ";
+  const bad = "border-rose-500 focus:border-[#104c6b] ";
   return (
     <label className="block">
       <span className="text-sm font-medium text-slate-700">
@@ -53,7 +53,7 @@ const Input = ({
 };
 
 const Section = ({ id, title, subtitle, children }) => (
-  <section id={id} className="py-16 scroll-mt-24 mt-36 sm:py-20">
+  <section id={id} className="py-6 mt-12 scroll-mt-24 sm:py-20">
     <div className="max-w-6xl px-4 mx-auto">
       <div className="mb-10">
         <h2 className="text-2xl font-bold tracking-tight sm:text-3xl text-slate-900">{title}</h2>
@@ -198,11 +198,11 @@ export default function LandingPage() {
             <span className="hidden ml-2 font-semibold sm:inline">Ancestral Code x FPT University</span>
           </div>
           <nav className="items-center hidden gap-6 text-sm md:flex">
-            <a href="#gioi-thieu" className="hover:text-indigo-600">Giới thiệu</a>
-            <a href="#muc-tieu" className="hover:text-indigo-600">Mục tiêu</a>
-            <a href="#timeline" className="hover:text-indigo-600">Quy trình</a>
-            <a href="#san-pham" className="hover:text-indigo-600">Sản phẩm</a>
-            <a href="#dang-ky" className="font-semibold text-indigo-600 hover:text-indigo-600">Đăng ký</a>
+            <a href="#gioi-thieu" className="hover:text-[#104c6b]">Giới thiệu</a>
+            <a href="#muc-tieu" className="hover:text-[#104c6b]">Mục tiêu</a>
+            <a href="#timeline" className="hover:text-[#104c6b]">Quy trình</a>
+            <a href="#san-pham" className="hover:text-[#104c6b]">Sản phẩm</a>
+            <a href="#dang-ky" className="font-semibold text-[#104c6b] hover:text-[#104c6b]">Đăng ký</a>
           </nav>
           <a href="#dang-ky" className="inline-flex items-center px-4 py-2 text-sm text-white bg-indigo-600 rounded-full shadow md:hidden hover:bg-indigo-700">Đăng ký</a>
         </div>
@@ -241,7 +241,7 @@ export default function LandingPage() {
 
             </div>
 
-            <div class="mt-10 flex flex-wrap items-center gap-5">
+            <div class="mt-10 flex flex-wrap items-center justify-center gap-5">
               <a href="#dang-ky" class="inline-flex items-center rounded-2xl bg-[#104c6b] px-8 py-4 text-white font-semibold shadow-xl transition-all duration-300 ease-in-outhover:shadow-2xl">
                 Join the Bootcamp
               </a>
@@ -251,8 +251,7 @@ export default function LandingPage() {
             </div>
           </div>
 
-          <div className="relative w-full h-[500px]">
-
+          <div className="relative w-full h-[500px] hidden lg:block">
             <img
               src="https://i1-vnexpress.vnecdn.net/2023/02/16/fptu-7390-1676520386.jpg?w=0&h=0&q=100&dpr=2&fit=crop&s=HCbWxBSY3xZ1tHnC0ood_Q"
               alt="Sinh viên FPT"
@@ -275,93 +274,62 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <Section id="program-roadmap" title="Your Bootcamp Journey" subtitle="A structured 4-month path from idea to a published mobile game.">
-        <div className="relative max-w-6xl py-20 mx-auto mt-80 md:py-36">
-          <div className="flex items-center justify-between bg-[#104c6b] w-full h-2 rounded-full">
-            <div className="relative grid w-8 h-8 rounded-full place-items-center">
-              <div className="w-3 h-3 rounded-full bg-[#f97316]"></div>
+      <Section
+        id="program-roadmap"
+        title="Your Bootcamp Journey"
+        subtitle="A structured 4-month path from idea to a published mobile game."
+      >
+        <div className="relative max-w-6xl py-6 mx-auto">
+
+
+          <div className="relative flex flex-col lg:flex-row lg:justify-between lg:gap-6">
+            {roadmapItems.map((item, index) => (
               <div
-                className={`absolute bottom-12 p-6 bg-white border rounded-3xl border-slate-200 transition-shadow duration-300 hover:shadow-xl w-64 mx-auto`}
-
+                key={index}
+                className="relative flex flex-col items-center lg:w-1/4"
               >
-                <p className="text-sm font-semibold tracking-wide uppercase text-slate-500">{roadmapItems[0].month}</p>
-                <h4 className="mt-1 text-lg font-bold text-slate-900">{roadmapItems[0].title}</h4>
-                <p className="mt-2 text-sm text-slate-600">{roadmapItems[0].desc}</p>
+                {/* Circle milestone */}
+                <div className="flex items-center justify-center text-white w-8 h-8 bg-[#f97316] border rounded-full mt-8">{index + 1}</div>
 
-                <ul className="mt-4 space-y-2 text-sm text-left text-slate-700">
-                  {roadmapItems[0].features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <CheckIcon className="flex-shrink-0 w-4 h-4 mt-1 text-emerald-500" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+
+
+
+                {/* Info box */}
+                <div className="mt-2 p-6 bg-white rounded-3xl shadow-lg border border-slate-200 max-w-[360px] text-center transform transition duration-500 ease-out opacity-0 translate-y-6 animate-[fadeSlideUp_0.6s_forwards]">
+                  <p className="text-sm font-semibold tracking-wide uppercase text-slate-500">
+                    {item.month}
+                  </p>
+                  <h4 className="mt-1 text-lg font-bold text-slate-900">
+                    {item.title}
+                  </h4>
+                  <p className="mt-2 text-sm text-slate-600">{item.desc}</p>
+                  <ul className="mt-4 space-y-2 text-sm text-slate-700">
+                    {item.features.map((feature, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <CheckIcon className="flex-shrink-0 w-4 h-4 mt-1 text-emerald-500" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
-            <div className="grid w-8 h-8 rounded-full place-items-center">
-              <div className="w-3 h-3 rounded-full bg-[#f97316]"></div>
-              <div
-                className={`absolute bottom-[180px] p-6 bg-white border rounded-3xl border-slate-200 transition-shadow duration-300 hover:shadow-xl w-64 mx-auto`}
-
-              >
-                <p className="text-sm font-semibold tracking-wide uppercase text-slate-500">{roadmapItems[1].month}</p>
-                <h4 className="mt-1 text-lg font-bold text-slate-900">{roadmapItems[1].title}</h4>
-                <p className="mt-2 text-sm text-slate-600">{roadmapItems[1].desc}</p>
-
-                <ul className="mt-4 space-y-2 text-sm text-left text-slate-700">
-                  {roadmapItems[1].features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <CheckIcon className="flex-shrink-0 w-4 h-4 mt-1 text-emerald-500" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div className="grid w-8 h-8 rounded-full place-items-center">
-              <div className="w-3 h-3 rounded-full bg-[#f97316]"></div>
-              <div
-                className={`absolute bottom-[180px] p-6 bg-white border rounded-3xl border-slate-200 transition-shadow duration-300 hover:shadow-xl w-64 mx-auto`}
-              >
-                <p className="text-sm font-semibold tracking-wide uppercase text-slate-500">{roadmapItems[2].month}</p>
-                <h4 className="mt-1 text-lg font-bold text-slate-900">{roadmapItems[2].title}</h4>
-                <p className="mt-2 text-sm text-slate-600">{roadmapItems[2].desc}</p>
-
-                <ul className="mt-4 space-y-2 text-sm text-left text-slate-700">
-                  {roadmapItems[2].features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <CheckIcon className="flex-shrink-0 w-4 h-4 mt-1 text-emerald-500" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            <div className="grid w-8 h-8 rounded-full place-items-center">
-              <div className="w-3 h-3 rounded-full bg-[#f97316]"></div>
-              <div
-                className={`absolute bottom-[180px] p-6 bg-white border rounded-3xl border-slate-200 transition-shadow duration-300 hover:shadow-xl w-64 mx-auto`}
-              >
-                <p className="text-sm font-semibold tracking-wide uppercase text-slate-500">{roadmapItems[3].month}</p>
-                <h4 className="mt-1 text-lg font-bold text-slate-900">{roadmapItems[3].title}</h4>
-                <p className="mt-2 text-sm text-slate-600">{roadmapItems[3].desc}</p>
-
-                <ul className="mt-4 space-y-2 text-sm text-left text-slate-700">
-                  {roadmapItems[3].features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <CheckIcon className="flex-shrink-0 w-4 h-4 mt-1 text-emerald-500" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+            ))}
           </div>
-
-
         </div>
-      </Section >
+
+        {/* Tailwind animation keyframes */}
+        <style>
+          {`
+      @keyframes fadeSlideUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    `}
+        </style>
+      </Section>
+
 
 
       {/* Trust & Support */}
@@ -450,14 +418,14 @@ export default function LandingPage() {
                   name="note"
                   rows={4}
                   placeholder="Skills/experience, desired role (Dev/Artist/QA/PM)..."
-                  className="w-full px-4 py-3 mt-1 border shadow-sm outline-none rounded-2xl border-slate-200 bg-white/70 focus:border-indigo-400 focus:ring-4 focus:ring-indigo-100"
+                  className="w-full px-4 py-3 mt-1 border shadow-sm outline-none rounded-2xl border-slate-200 bg-white 70 focus:border-[#104c6b] "
                   value={form.note}
                   onChange={(e) => setField("note", e.target.value)}
                 />
               </label>
               <button
                 type="submit"
-                className="inline-flex items-center justify-center px-6 py-3 mt-2 font-semibold text-white bg-indigo-600 shadow-lg rounded-2xl shadow-indigo-600/20 hover:bg-indigo-700"
+                className="inline-flex items-center justify-center px-6 py-3 mt-2 font-semibold text-white bg-[#104c6b] shadow-lg rounded-2xl shadow-indigo-600/20 "
               >
                 Apply
               </button>
