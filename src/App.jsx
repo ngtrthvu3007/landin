@@ -198,18 +198,18 @@ export default function LandingPage() {
             <span className="hidden ml-2 font-semibold sm:inline">Ancestral Code x FPT University</span>
           </div>
           <nav className="items-center hidden gap-6 text-sm md:flex">
-            <a href="#gioi-thieu" className="hover:text-[#104c6b]">Giới thiệu</a>
-            <a href="#muc-tieu" className="hover:text-[#104c6b]">Mục tiêu</a>
-            <a href="#timeline" className="hover:text-[#104c6b]">Quy trình</a>
-            <a href="#san-pham" className="hover:text-[#104c6b]">Sản phẩm</a>
-            <a href="#dang-ky" className="font-semibold text-[#104c6b] hover:text-[#104c6b]">Đăng ký</a>
+            <a href="#about" className="hover:text-[#104c6b]">About Us</a>
+            <a href="#roadmap" className="hover:text-[#104c6b]">Roadmap</a>
+            <a href="#trust" className="hover:text-[#104c6b]">Sponsor</a>
+            <a href="#faq" className="hover:text-[#104c6b]">FAQ</a>
+            <a href="#form" className="font-semibold text-[#104c6b] hover:text-[#104c6b]">Apply now</a>
           </nav>
-          <a href="#dang-ky" className="inline-flex items-center px-4 py-2 text-sm text-white bg-indigo-600 rounded-full shadow md:hidden hover:bg-indigo-700">Đăng ký</a>
+          <a href="#from" className="inline-flex items-center px-4 py-2 text-sm text-white bg-indigo-600 rounded-full shadow md:hidden hover:bg-indigo-700">Apply now</a>
         </div>
       </header>
 
       {/* Hero */}
-      <section id="gioi-thieu" className="relative overflow-hidden">
+      <section id="about" className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(79,70,229,0.08),transparent_60%)]" />
         <div className="grid max-w-6xl gap-10 px-4 py-16 mx-auto sm:py-24 lg:grid-cols-2">
           <div>
@@ -245,7 +245,7 @@ export default function LandingPage() {
               <a href="#dang-ky" class="inline-flex items-center rounded-2xl bg-[#104c6b] px-8 py-4 text-white font-semibold shadow-xl transition-all duration-300 ease-in-outhover:shadow-2xl">
                 Join the Bootcamp
               </a>
-              <a href="#muc-tieu" class="inline-flex items-center rounded-2xl px-8 py-4 border border-slate-300 transition-all duration-300 ease-in-out hover:border-slate-400 hover:bg-slate-50">
+              <a href="#roadmap" class="inline-flex items-center rounded-2xl px-8 py-4 border border-slate-300 transition-all duration-300 ease-in-out hover:border-slate-400 hover:bg-slate-50">
                 Learn More
               </a>
             </div>
@@ -275,7 +275,7 @@ export default function LandingPage() {
       </section>
 
       <Section
-        id="program-roadmap"
+        id="roadmap"
         title="Your Bootcamp Journey"
         subtitle="A structured 4-month path from idea to a published mobile game."
       >
@@ -368,7 +368,7 @@ export default function LandingPage() {
       </Section>
 
       {/* Registration Form */}
-      <Section id="dang-ky" title="Apply Form">
+      <Section id="form" title="Apply Form">
         <div className="grid items-start gap-8 lg:grid-cols-2">
           <form onSubmit={handleSubmit} className="p-6 bg-white border shadow-sm rounded-3xl border-slate-200" noValidate>
             <div className="grid gap-4">
