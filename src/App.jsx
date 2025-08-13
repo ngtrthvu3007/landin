@@ -242,7 +242,7 @@ export default function LandingPage() {
             </div>
 
             <div class="mt-10 flex flex-wrap items-center justify-center gap-5">
-              <a href="#dang-ky" class="inline-flex items-center rounded-2xl bg-[#104c6b] px-8 py-4 text-white font-semibold shadow-xl transition-all duration-300 ease-in-outhover:shadow-2xl">
+              <a href="#form" class="inline-flex items-center rounded-2xl bg-[#104c6b] px-8 py-4 text-white font-semibold shadow-xl transition-all duration-300 ease-in-outhover:shadow-2xl">
                 Join the Bootcamp
               </a>
               <a href="#roadmap" class="inline-flex items-center rounded-2xl px-8 py-4 border border-slate-300 transition-all duration-300 ease-in-out hover:border-slate-400 hover:bg-slate-50">
