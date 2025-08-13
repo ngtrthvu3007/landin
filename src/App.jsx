@@ -192,9 +192,9 @@ export default function LandingPage() {
       <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 bg-white/60 border-b border-slate-200">
         <div className="flex items-center justify-between h-16 max-w-6xl px-4 mx-auto">
           <div className="flex items-center gap-3">
-            <img src="https://dummyimage.com/40x40/000/fff&text=GS" alt="Studio" className="w-10 h-10 shadow rounded-xl" />
+            <img src="./logo.png" alt="Studio" className="w-10 h-10 rounded-md" />
             <span className="text-sm text-slate-400">×</span>
-            <img src="https://dummyimage.com/40x40/f97316/fff&text=FPT" alt="ĐH FPT TP.HCM" className="w-10 h-10 shadow rounded-xl" />
+            <img src="./logo-fpt.jpg" alt="ĐH FPT TP.HCM" className="w-10 h-10" />
             <span className="hidden ml-2 font-semibold sm:inline">Ancestral Code x FPT University</span>
           </div>
           <nav className="items-center hidden gap-6 text-sm md:flex">
@@ -231,7 +231,7 @@ export default function LandingPage() {
                   </p>
                 </div>
                 <div class="flex flex-col items-center text-center">
-                  <img src="https://dummyimage.com/60x60/f97316/fff&text=FPT" alt="FPT University" class="rounded-lg w-24 h-24 mb-2" />
+                  <img src="./logo-fpt.jpg" alt="FPT University" class="rounded-lg w-24 h-24 mb-2" />
                   <p class="text-md font-semibold">FPT University</p>
                   <p class="text-sm text-slate-600 max-w-md mt-1">
                     Supporting students with academic accreditation and internship credits.
@@ -336,11 +336,11 @@ export default function LandingPage() {
       <Section id="trust" title="Sponsor" subtitle="Ancestral Code Studio and FPT University invite top students to a unique bootcamp. Get hands-on experience in software engineering and graphic design to create and launch a mobile game">
         <div className="grid items-center gap-6 md:grid-cols-3">
           <div className="p-6 text-center bg-white border rounded-3xl border-slate-200">
-            <img src="https://dummyimage.com/120x120/000/fff&text=Studio" alt="Studio" className="mx-auto rounded-2xl" />
+            <img src="./logo.png" alt="Studio" className="mx-auto rounded-2xl" />
             <p className="mt-3 text-sm text-slate-600">Professional partner, project mentor, game production process.</p>
           </div>
           <div className="p-6 text-center bg-white border rounded-3xl border-slate-200">
-            <img src="https://dummyimage.com/120x120/f97316/fff&text=FPT" alt="FPT University HCMC" className="mx-auto rounded-2xl" />
+            <img src="./logo-fpt.jpg" alt="FPT University HCMC" className="mx-auto rounded-2xl" />
             <p className="mt-3 text-sm text-slate-600">Provides academic support, internship recognition, and student assistance.</p>
           </div>
           <div className="p-6 text-center bg-white border rounded-3xl border-slate-200">
